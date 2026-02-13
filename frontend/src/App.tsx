@@ -5,6 +5,7 @@ import {
   fetchBreakdown,
 } from "./api"
 import { Store, TimeSeriesPoint, BreakdownRow } from "./types"
+import UploadPanel from "./components/UploadPanel"
 
 function App() {
   const [stores, setStores] = useState<Store[]>([])
@@ -52,7 +53,13 @@ function App() {
     <div style={{ padding: "2rem" }}>
       <h1>Mall Foot Traffic Dashboard</h1>
 
-      {/* Components will go here once i make them */}
+      <UploadPanel
+        onUploadSuccess={() => {
+          loadStores()
+          loadTimeSeries()
+          setSelectedTimestamp(null)
+        }}
+      />
 
       <pre>{JSON.stringify(timeSeries.slice(0, 3), null, 2)}</pre>
     </div>
