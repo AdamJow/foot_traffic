@@ -7,6 +7,7 @@ import {
 import { Store, TimeSeriesPoint, BreakdownRow } from "./types"
 import UploadPanel from "./components/UploadPanel"
 import StoreFilter from "./components/StoreFilter"
+import MallChart from "./components/MallChart"
 
 function App() {
   const [stores, setStores] = useState<Store[]>([])
@@ -73,7 +74,12 @@ function App() {
       ) : timeSeries.length === 0 ? (
         <p>No dataset uploaded</p>
       ) : (
-        <pre>{JSON.stringify(timeSeries.slice(0, 3), null, 2)}</pre>
+        <MallChart
+          data={timeSeries}
+          onPointClick={(timestamp) => {
+            setSelectedTimestamp(timestamp)
+          }}
+        />
       )}
     </div>
   )
