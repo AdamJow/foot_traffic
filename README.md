@@ -108,6 +108,12 @@ For future scalability, switching to PostgreSQL via Docker Compose (as mentioned
 * Only supports a single dataset.
 * Very basic UI design that prioritise functionality over visuals.
 
+## What I Didn’t Get To
+* Dockerfile and Docker Compose setup
+* Makefile targets (e.g., make build, make run, make test)
+* Automated backend or frontend tests
+* PostgreSQL migration (currently using SQLite)
+
 ## If I Had 8 More Hours
 
 * Add backend test coverage using FastAPI's TestClient. I would test the CSV ingestion, aggregation correctness, and breakdown sorting functionality specifically.
