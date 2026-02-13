@@ -1,3 +1,47 @@
+## Directions to run app
+
+Steps for project working:
+
+1) Clone the Project Repository:
+
+git clone https://github.com/AdamJow/foot_traffic.git
+
+2) Navigate to the Project Directory
+
+cd foot_traffic
+
+3) Navigate to the backend Directory
+
+cd backend
+
+4) Create the Virtual Environment:
+
+python -m venv venv
+
+5) Enter virtual enviroment
+
+venv\Scripts\activate
+
+6) Install requirement.txt
+
+pip install -r requirements.txt
+
+7) Run backend
+
+uvicorn main:app --reload
+
+8) Open new terminal and navigate to frontend Directory
+
+cd frontend
+
+9) Install dependencies
+
+npm install
+
+9) Run frontend
+
+npm run dev
+
 ## Mall Foot Traffic Design
 
 The primary focus was on maintaining a structured and maintainable architecture design with basic functionality. The following reflects on key design decisions I made during the implementation process including limitations and potential improvements. 
