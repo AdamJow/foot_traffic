@@ -6,6 +6,7 @@ import {
 } from "./api"
 import { Store, TimeSeriesPoint, BreakdownRow } from "./types"
 import UploadPanel from "./components/UploadPanel"
+import StoreFilter from "./components/StoreFilter"
 
 function App() {
   const [stores, setStores] = useState<Store[]>([])
@@ -61,7 +62,19 @@ function App() {
         }}
       />
 
-      <pre>{JSON.stringify(timeSeries.slice(0, 3), null, 2)}</pre>
+      <StoreFilter
+        stores={stores}
+        selectedStores={selectedStores}
+        onChange={(ids) => setSelectedStores(ids)}
+      />
+
+      {loading ? (
+        <p>Loading...</p>
+      ) : timeSeries.length === 0 ? (
+        <p>No dataset uploaded</p>
+      ) : (
+        <pre>{JSON.stringify(timeSeries.slice(0, 3), null, 2)}</pre>
+      )}
     </div>
   )
 }
