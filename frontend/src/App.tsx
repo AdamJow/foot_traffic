@@ -8,6 +8,7 @@ import { Store, TimeSeriesPoint, BreakdownRow } from "./types"
 import UploadPanel from "./components/UploadPanel"
 import StoreFilter from "./components/StoreFilter"
 import MallChart from "./components/MallChart"
+import BreakdownPanel from "./components/BreakdownPanel"
 
 function App() {
   const [stores, setStores] = useState<Store[]>([])
@@ -81,6 +82,10 @@ function App() {
           }}
         />
       )}
+      <BreakdownPanel
+        timestamp={selectedTimestamp || ""}
+        data={breakdown}
+      />
     </div>
   )
 }

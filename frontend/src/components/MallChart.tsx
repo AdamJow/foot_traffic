@@ -20,10 +20,9 @@ export default function MallChart({ data, onPointClick }: Props) {
       <ResponsiveContainer>
         <LineChart
           data={data}
-          onClick={(state) => {
-            if (state?.activePayload?.length) {
-              const point = state.activePayload[0].payload
-              onPointClick(point.timestamp)
+          onClick={(state: any) => {
+            if (state && state.activeLabel) {
+              onPointClick(state.activeLabel)
             }
           }}
         >
@@ -47,3 +46,4 @@ export default function MallChart({ data, onPointClick }: Props) {
     </div>
   )
 }
+
