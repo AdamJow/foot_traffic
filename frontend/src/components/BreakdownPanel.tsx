@@ -1,4 +1,4 @@
-import { BreakdownRow } from "../types"
+import type { BreakdownRow } from "../types"
 
 interface Props {
   timestamp: string

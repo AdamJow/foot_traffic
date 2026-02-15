@@ -1,5 +1,5 @@
 import axios from "axios"
-import { Store, TimeSeriesPoint, BreakdownRow } from "./types"
+import type { Store, TimeSeriesPoint, BreakdownRow } from "./types"
 
 const API_BASE = "http://localhost:8000/api"
 

@@ -2,45 +2,18 @@
 
 Steps for project working:
 
-1) Clone the Project Repository:
+1: Clone the repository
 
-git clone https://github.com/AdamJow/foot_traffic.git
+    git clone https://github.com/AdamJow/foot_traffic.git
+    cd foot_traffic
 
-2) Navigate to the Project Directory
+2: Build and start the application
 
-cd foot_traffic
+    docker compose up --build
 
-3) Navigate to the backend Directory
+3: Access the application
 
-cd backend
-
-4) Create the Virtual Environment:
-
-python -m venv venv
-
-5) Enter virtual enviroment
-
-venv\Scripts\activate
-
-6) Install requirement.txt
-
-pip install -r requirements.txt
-
-7) Run backend
-
-uvicorn main:app --reload
-
-8) Open new terminal and navigate to frontend Directory
-
-cd frontend
-
-9) Install dependencies
-
-npm install
-
-9) Run frontend
-
-npm run dev
+    http://localhost:8000
 
 ## Mall Foot Traffic Design
 

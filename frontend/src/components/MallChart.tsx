@@ -7,7 +7,7 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts"
-import { TimeSeriesPoint } from "../types"
+import type { TimeSeriesPoint } from "../types"
 
 interface Props {
   data: TimeSeriesPoint[]

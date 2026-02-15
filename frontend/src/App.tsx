@@ -4,7 +4,7 @@ import {
   fetchTimeSeries,
   fetchBreakdown,
 } from "./api"
-import { Store, TimeSeriesPoint, BreakdownRow } from "./types"
+import type { Store, TimeSeriesPoint, BreakdownRow } from "./types"
 import UploadPanel from "./components/UploadPanel"
 import StoreFilter from "./components/StoreFilter"
 import MallChart from "./components/MallChart"
